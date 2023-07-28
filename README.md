@@ -1,22 +1,14 @@
-# Quantitative Risk Analysis of Stock Portfolio Using Monte Carlo Simulation: A Case Study
+# Monte Carlo simulation
 
-Risk analysis is a process of assessing and evaluating potential risks and their impact on an organization, project, or decision-making. It involves identifying, analyzing, and prioritizing risks to make informed decisions on how to mitigate or manage them effectively.
+Monte Carlo simulation is a powerful technique for modeling and analyzing complex systems by using random numbers. It's widely used in various fields such as finance, physics, engineering, and computer science. Following topics will be covered:
 
-Types of risks analyzed in the financial banking sector
-1. Credit Risk
-2. Market risk
-3. Liquidity risk
-4. Operational risk
-5. Regulatory Risk
-6. Reputational Risk
-
-Financial Risk Analysis key steps:
-- Risk Identification
-- Risk Assessment
-- Risk Measurement and Quantification
-- Risk Monitoring and Reporting
-- Risk Mitigation and Management
-- Risk Communication and Governance
-- Risk reduction strategies
-
-For the purpose of calculating VaR and CVar, I have used Monte Carlo simulation for randomly selected stocks. (Normal and t-distributions are used for the simulation).
+- Introduction to Monte Carlo Simulation
+- Basic Principles
+- Steps in Monte Carlo Simulation
+- Statistics
+  - Probability Distributions
+  - Estimation and Sampling
+  - Confidence Intervals
+- Generating Random Numbers
+- Variance Reduction Techniques
+- Applications of Monte Carlo Simulation
