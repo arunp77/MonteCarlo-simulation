@@ -2,67 +2,49 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #fff;
-  }
-  
-  header {
-    width: 100%;
-    height: 400px; /* Adjust the height of the header as needed */
-    overflow: hidden;
-    opacity: 0.8;
-    text-align: center; /* To center the text horizontally */
-  }
-  
-  .header-container h1 {
-    position: absolute;
-    top: 50%; /* To center the text vertically */
-    left: 50%; /* To center the text horizontally */
-    transform: translate(-50%, -50%); /* To center the text perfectly */
-    font-size: 36px; /* Adjust font size as needed */
-    color: white; /* Adjust text color as needed */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  main {
+}
+
+header {
+    background-image: url("Website-image/header.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the header content horizontally */
+}
+
+.logo {
+    padding: 10px;
+}
+
+.logo img {
+    height: 80px; /* Increase the logo height */
+}
+
+.title {
+    font-size: 36px; /* Increase the title font size */
+    margin-left: 20px;
+    color: #fff; /* Adjust the title text color */
+    text-align: center; /* Center the title text */
+}
+
+.content {
+    max-width: 800px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the content horizontally */
     padding: 20px;
-  }
-  
-  .boxes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .box {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .box h2 {
-    margin-top: 0;
-    font-size: 20px;
-  }
-  
-  .box figure {
-    margin: 0;
-    text-align: center;
-  }
-  
-  .box img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+}
+
+h2 {
+    font-size: 24px; /* Adjust the heading font size */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 18px; /* Adjust the list item font size */
     margin-bottom: 10px;
-  }
-  
-  .box figcaption {
-    font-size: 14px;
-  }
-  
-  /* Additional styling can be added as needed */
-  
+}
