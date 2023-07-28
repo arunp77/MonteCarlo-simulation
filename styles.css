@@ -9,16 +9,19 @@ body {
   
   header {
     width: 100%;
-    height: 300px; /* Adjust the height of the header as needed */
+    height: 400px; /* Adjust the height of the header as needed */
     overflow: hidden;
+    opacity: 0.8;
+    text-align: center; /* To center the text horizontally */
   }
   
-  .header-container {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .header-container img {
+  .header-container h1 {
+    position: absolute;
+    top: 50%; /* To center the text vertically */
+    left: 50%; /* To center the text horizontally */
+    transform: translate(-50%, -50%); /* To center the text perfectly */
+    font-size: 36px; /* Adjust font size as needed */
+    color: white; /* Adjust text color as needed */
     width: 100%;
     height: 100%;
     object-fit: cover;
