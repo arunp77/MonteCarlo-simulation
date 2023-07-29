@@ -8,9 +8,12 @@ header {
     background-image: url("Website-image/header.jpg");
     background-size: cover;
     background-position: center;
-    height: 250px; /* Adjust the height as needed */
+    height: 350px; /* Adjust the height as needed */
     text-align: center; /* Center the header content horizontally */
     padding-top: 40px; /* Add some top padding to the header */
+
+    /* Add the opacity value to the background image */
+    background-color: rgba(0, 0, 0, 01); /* The last value (0.6) sets the opacity to 60% */
 }
 
 .logo {
@@ -22,13 +25,13 @@ header {
 }
 
 .title {
-    font-size: 40px; /* Increase the title font size */
+    font-size: 50px; /* Increase the title font size */
     color: #fff; /* Adjust the title text color */
 }
 
 .subtitle {
-    font-size: 24px; /* Adjust the subtitle font size */
-    color: #ff0000; /* Change the subtitle text color (red in this case) */
+    font-size: 30px; /* Adjust the subtitle font size */
+    color: #c7f511; /* Change the subtitle text color (red in this case) */
     margin-top: 10px; /* Add some space between the title and subtitle */
 }
 
