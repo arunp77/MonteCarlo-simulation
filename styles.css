@@ -9,9 +9,8 @@ header {
     background-size: cover;
     background-position: center;
     height: 250px; /* Adjust the height as needed */
-    display: flex;
-    align-items: center;
-    flex-direction: column; /* Align the content vertically in the header */
+    text-align: center; /* Center the header content horizontally */
+    padding-top: 40px; /* Add some top padding to the header */
 }
 
 .logo {
@@ -25,19 +24,17 @@ header {
 .title {
     font-size: 40px; /* Increase the title font size */
     color: #fff; /* Adjust the title text color */
-    text-align: center; /* Center the title text */
 }
 
 .subtitle {
     font-size: 24px; /* Adjust the subtitle font size */
     color: #ff0000; /* Change the subtitle text color (red in this case) */
-    text-align: center; /* Center the subtitle text */
     margin-top: 10px; /* Add some space between the title and subtitle */
 }
 
 .content {
     max-width: 800px; /* Set a maximum width for the content */
-    margin: 0 auto; /* Center the content horizontally */
+    margin: 20px auto; /* Center the content horizontally and add some space from the header */
     padding: 20px;
 }
 
