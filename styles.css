@@ -8,14 +8,14 @@ header {
     background-image: url("Website-image/header.jpg");
     background-size: cover;
     background-position: center;
-    height: 200px; /* Adjust the height as needed */
+    height: 250px; /* Adjust the height as needed */
     display: flex;
     align-items: center;
     justify-content: center; /* Center the header content horizontally */
 }
 
 .logo {
-    padding: 10px;
+    padding: 40px;
 }
 
 .logo img {
@@ -23,10 +23,10 @@ header {
 }
 
 .title {
-    font-size: 36px; /* Increase the title font size */
-    margin-left: 20px;
+    font-size: 40px; /* Increase the title font size */
     color: #fff; /* Adjust the title text color */
     text-align: center; /* Center the title text */
+    flex: 1; /* Allow the title to take up the remaining space */
 }
 
 .content {
