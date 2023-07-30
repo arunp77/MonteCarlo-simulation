@@ -1,111 +1,150 @@
 /* style.css */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #87ceeb; /* Light sky blue */
-    background-image: linear-gradient(to bottom right, #87ceeb, #ffffff); /* Gradient from light sky blue to white */
-  }    
+  margin: 0;
+  padding: 0;
+  background-color: #87ceeb; /* Light sky blue */
+  background-image: linear-gradient(to bottom right, #87ceeb, #ffffff); /* Gradient from light sky blue to white */
+}    
 
+header {
+  background-size: cover;
+  background-position: center;
+  height: auto; /* Adjust the height to fit the content */
+  text-align: center; /* Center the header content horizontally */
+  padding-top: 10px; /* Add some top padding to the header */
 
- .navbar {
-   display: flex;
-   justify-content: center;
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   background-color: transparent;
- }
+  /* Add the opacity value to the background image */
+  background-color: rgba(0, 0, 0, 0.6); /* The last value (0.6) sets the opacity to 60% */
+}
 
- .navbar li {
-   float: none;
-   display: inline-block;
- }
+.navbar {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
 
- .navbar li a {
-   display: block;
-   padding: 16px;
-   text-decoration: none;
-   color: black;
-   transition: background-color 0.3s ease;
- }
+.navbar li {
+  float: none;
+  display: inline-block;
+}
 
- .navbar li a:hover {
-   background-color: #f9f9f9;
- }
+.navbar li a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s ease;
+}
 
- .dropdown-content {
-   display: none;
-   position: absolute;
-   background-color: #f9f9f9;
-   min-width: 160px;
-   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- }
+.navbar li a:hover {
+  background-color: #f9f9f9;
+}
 
- .dropdown-content a {
-   color: black;
-   padding: 12px 16px;
-   text-decoration: none;
-   display: block;
-   transition: background-color 0.3s ease;
- }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
 
- .dropdown:hover .dropdown-content {
-   display: block;
- }
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
 
- .dropdown-content a:hover {
-   background-color: red;
- }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
- .header-container {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 20px;
- }
+.dropdown-content a:hover {
+  background-color: red;
+}
 
- h1 {
-   font-size: 24px;
-   margin-left: 10px;
- }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
 
- .profile-image {
-   width: 250px; /* Adjust the width as needed */
-   height: auto; /* Adjust the height as needed */
-   border-radius: 15%; /* To create a circular image */
-   margin-left: auto;
-   transition: box-shadow 0.3s ease;
- }
+h1 {
+  font-size: 24px;
+  margin-left: 10px;
+}
 
- .profile-image:hover {
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Customize the box shadow effect */
- }
+.profile-image {
+  width: 250px; /* Adjust the width as needed */
+  height: auto; /* Adjust the height as needed */
+  border-radius: 15%; /* To create a circular image */
+  margin-left: auto;
+  transition: box-shadow 0.3s ease;
+}
 
- #typing-text {
-   font-size: 24px;
-   margin-left: 10px;
-   white-space: nowrap;
-   overflow: hidden;
-   border-right: 0.15em solid #000; /* Cursor style */
-   animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
- }
+.profile-image:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Customize the box shadow effect */
+}
 
- @keyframes typing {
-   from {
-     width: 0;
-   }
-   to {
-     width: 300px; /* Adjust the width as needed */
-   }
- }
+#typing-text {
+  font-size: 24px;
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #000; /* Cursor style */
+  animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+}
 
- @keyframes blink-caret {
-   from, to {
-     border-color: transparent;
-   }
-   50% {
-     border-color: #000;
-   }
- }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 300px; /* Adjust the width as needed */
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
+
+/* Content class styles */
+.content {
+  max-width: 1200px; /* Set a maximum width for the content */
+  margin: 30px auto; /* Center the content horizontally and add some space from the header */
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.content li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 /* Add more styles as needed */
