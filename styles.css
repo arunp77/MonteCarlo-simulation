@@ -8,12 +8,12 @@ header {
     background-image: url("Website-image/header.jpg");
     background-size: cover;
     background-position: center;
-    height: 350px; /* Adjust the height as needed */
+    height: auto; /* Adjust the height to fit the content */
     text-align: center; /* Center the header content horizontally */
     padding-top: 40px; /* Add some top padding to the header */
 
     /* Add the opacity value to the background image */
-    background-color: rgba(0, 0, 0, 01); /* The last value (0.6) sets the opacity to 60% */
+    background-color: rgba(0, 0, 0, 0.6); /* The last value (0.6) sets the opacity to 60% */
 }
 
 .logo {
@@ -32,7 +32,7 @@ header {
 .subtitle {
     font-size: 30px; /* Adjust the subtitle font size */
     color: #c7f511; /* Change the subtitle text color (red in this case) */
-    margin-top: 10px; /* Add some space between the title and subtitle */
+    margin-top: 1px; /* Add some space between the title and subtitle */
 }
 
 .content {
