@@ -1,56 +1,111 @@
-/* styles.css */
+/* style.css */
 body {
     margin: 0;
     padding: 0;
-}
+    background-color: #87ceeb; /* Light sky blue */
+    background-image: linear-gradient(to bottom right, #87ceeb, #ffffff); /* Gradient from light sky blue to white */
+  }    
 
-header {
-    background-image: url("Website-image/header.jpg");
-    background-size: cover;
-    background-position: center;
-    height: auto; /* Adjust the height to fit the content */
-    text-align: center; /* Center the header content horizontally */
-    padding-top: 40px; /* Add some top padding to the header */
 
-    /* Add the opacity value to the background image */
-    background-color: rgba(0, 0, 0, 0.6); /* The last value (0.6) sets the opacity to 60% */
-}
+ .navbar {
+   display: flex;
+   justify-content: center;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: transparent;
+ }
 
-.logo {
-    padding: 40px;
-}
+ .navbar li {
+   float: none;
+   display: inline-block;
+ }
 
-.logo img {
-    height: 80px; /* Increase the logo height */
-}
+ .navbar li a {
+   display: block;
+   padding: 16px;
+   text-decoration: none;
+   color: black;
+   transition: background-color 0.3s ease;
+ }
 
-.title {
-    font-size: 50px; /* Increase the title font size */
-    color: #fff; /* Adjust the title text color */
-}
+ .navbar li a:hover {
+   background-color: #f9f9f9;
+ }
 
-.subtitle {
-    font-size: 30px; /* Adjust the subtitle font size */
-    color: #c7f511; /* Change the subtitle text color (red in this case) */
-    margin-top: 1px; /* Add some space between the title and subtitle */
-}
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ }
 
-.content {
-    max-width: 800px; /* Set a maximum width for the content */
-    margin: 20px auto; /* Center the content horizontally and add some space from the header */
-    padding: 20px;
-}
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   transition: background-color 0.3s ease;
+ }
 
-h2 {
-    font-size: 24px; /* Adjust the heading font size */
-}
+ .dropdown:hover .dropdown-content {
+   display: block;
+ }
 
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
+ .dropdown-content a:hover {
+   background-color: red;
+ }
 
-li {
-    font-size: 18px; /* Adjust the list item font size */
-    margin-bottom: 10px;
-}
+ .header-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+ }
+
+ h1 {
+   font-size: 24px;
+   margin-left: 10px;
+ }
+
+ .profile-image {
+   width: 250px; /* Adjust the width as needed */
+   height: auto; /* Adjust the height as needed */
+   border-radius: 15%; /* To create a circular image */
+   margin-left: auto;
+   transition: box-shadow 0.3s ease;
+ }
+
+ .profile-image:hover {
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Customize the box shadow effect */
+ }
+
+ #typing-text {
+   font-size: 24px;
+   margin-left: 10px;
+   white-space: nowrap;
+   overflow: hidden;
+   border-right: 0.15em solid #000; /* Cursor style */
+   animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+ }
+
+ @keyframes typing {
+   from {
+     width: 0;
+   }
+   to {
+     width: 300px; /* Adjust the width as needed */
+   }
+ }
+
+ @keyframes blink-caret {
+   from, to {
+     border-color: transparent;
+   }
+   50% {
+     border-color: #000;
+   }
+ }
+/* Add more styles as needed */
