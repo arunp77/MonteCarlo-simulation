@@ -86,7 +86,7 @@ header {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 40px;
   margin-left: 10px;
 }
 
@@ -131,18 +131,18 @@ h1 {
 
 /* Content class styles */
 .content {
-  max-width: 1200px; /* Set a maximum width for the content */
+  max-width: 1400px; /* Set a maximum width for the content */
   margin: 30px auto; /* Center the content horizontally and add some space from the header */
-  padding: 20px;
+  padding: 10px;
 }
 
 .content h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .content p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -153,16 +153,35 @@ h1 {
 }
 
 .content li {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
 }
 pre {
-  background-color: #f4f4f4;
+  background-color: #f1f50b52;
   padding: 10px;
   font-size: 14px;
   font-family: 'Courier New', monospace;
   white-space: pre-wrap;
 }
-
-
-/* Add more styles as needed */
+.project-list {
+  border: 1px solid #d31010;
+  background-color: #2c5c135f;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 20px; /* Set the desired font size here */
+}
+.project-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.project-list li {
+  margin-bottom: 5px;
+}
+.project-list li a {
+  text-decoration: none;
+  color: #f9f9f9;
+}
+.project-list li a:hover {
+  color: #0066cc;
+}
