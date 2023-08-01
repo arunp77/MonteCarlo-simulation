@@ -13,7 +13,6 @@ header {
   height: auto; /* Adjust the height to fit the content */
   text-align: center; /* Center the header content horizontally */
   padding-top: 10px; /* Add some top padding to the header */
-
   /* Add the opacity value to the background image */
   background-color: rgba(0, 0, 0, 0.6); /* The last value (0.6) sets the opacity to 60% */
 }
@@ -32,13 +31,9 @@ header h1 {
 }
 
 .navbar {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  background-color: #333; /* Set the background color of the navigation bar */
   overflow: hidden;
-  background-color: transparent;
+  padding-top: 10px; /* Reduce the top padding to decrease space */
 }
 
 .navbar li {
