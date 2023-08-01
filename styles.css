@@ -196,7 +196,9 @@ pre {
   color: #0066cc;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+@media screen and (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
