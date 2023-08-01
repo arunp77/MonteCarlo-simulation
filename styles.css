@@ -20,7 +20,11 @@ header {
 .header-container {
   text-align: center;
 }
-
+header h1 {
+  font-size: 40px;
+  margin-left: 10px;
+  color: white; /* Set the text color to white */
+}
 .profile-image {
   max-width: 100%; /* Add this to limit the image width */
   height: auto; /* Maintain aspect ratio */
