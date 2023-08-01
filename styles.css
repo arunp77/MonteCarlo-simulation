@@ -17,6 +17,16 @@ header {
   background-color: rgba(0, 0, 0, 0.6); /* The last value (0.6) sets the opacity to 60% */
 }
 
+.header-container {
+  text-align: center;
+}
+
+.profile-image {
+  max-width: 100%; /* Add this to limit the image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
 .navbar {
   display: flex;
   justify-content: center;
