@@ -9,7 +9,7 @@ body {
   background-size: cover;
   background-position: center;
 }
-
+    
 /* Set the maximum width for the main content area */
 main {
   margin: 0 auto; /* Center the content horizontally within the main area */
@@ -194,4 +194,9 @@ pre {
 }
 .project-list li a:hover {
   color: #0066cc;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
