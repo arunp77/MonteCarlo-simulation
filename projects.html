@@ -24,23 +24,115 @@
   </nav>
 
   <div class="header-container">
-    <h1>Monte-Carlo simulation in Python</h1>
+    <h1>Projects</h1>
     </br>
     <img src="Website-image/MCS.png" alt="Your Image" class="profile-image">
   </div>
-  <div class="content">
-  <section id="projects">
-    <!-- Projects section content goes here -->
-    <h2>My Projects</h2>
-  </section>
-  <h2>Monte Carlo simulations and Machine learning algorithms</h2>
-  <ul>
-      <li>Monte Carlo simulations are a class of computational techniques that use random sampling to approximate and analyze complex systems or problems.</li>
-      <li>While Monte Carlo simulations themselves are not typically considered machine learning algorithms, they can be combined with machine learning techniques to enhance their capabilities.</li>
-      <li>It's important to note that the specific choice of machine learning algorithms in Monte Carlo simulations depends on the nature of the problem, the available data, and the objectives of the simulation.</li>
-      <li>Different algorithms may be more suitable for different scenarios, and their selection should be based on careful analysis and experimentation.</li>
-  </ul>
-</div>
-</div>
+
+  <div class="content" id="dice-rolling">
+    <h2>1. Dice-rolling</h2>
+      <p>Simulating rolling a fair six-sided die and calculating the average value after a large number of rolls.</p>
+    <h3>Simulate Rolling the Die</h3>
+      <pre><code>
+        import matplotlib.pyplot as plt
+        import numpy as np
+        import random
+        num_rolls = 1000000  # Number of rolls
+        rolls = []  # List to store rolled values
+        sum_values = 0  # Variable to store the sum of rolled values
+        # Simulate rolling the die num_rolls times
+        for _ in range(num_rolls):
+            roll = random.randint(1, 6)  # Randomly generate a number between 1 and 6
+            rolls.append(roll)
+            sum_values += roll
+        average = sum_values / num_rolls  # Calculate the average value
+        print(f"The average value after {num_rolls} rolls is: {average}")
+        </code></pre>
+    <p>Output is:</p>
+      <pre>
+        <code>The average value after 1000000 rolls is: 3.500648</code>
+      </pre>
+      <br>
+    <!-- Link to the next section -->
+    <button onclick="scrollToSection('#random-walk-problem')">Go to Random Walk Problem</button>
+
+    <!-- Return button -->
+    <button onclick="window.scrollTo(0, 0)">Return to Top</button>
+  </div>
+
+  <div class="content" id="random-walk-problem">
+    <h2>2. Random-walk-problem</h2>
+      <p>How likely is it that a drunk can find the bathroom?</p>
+      <p>angular movement along with straight movemement</p>
+      <p>To simulate the random movement of your drunk friend in any direction and visualize the path to the bathroom, you can use the following modified Python code:</p>
+      <pre><code>
+          import random
+          import math
+          import matplotlib.pyplot as plt
+
+          def simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps):
+              x = x_start  # Starting x-coordinate
+              y = y_start  # Starting y-coordinate
+              x_values = [x]  # List to store x-coordinates of each step
+              y_values = [y]  # List to store y-coordinates of each step
+
+              for _ in range(num_steps):
+                  angle = random.uniform(0, 2 * 3.14159)  # Random angle in radians
+                  distance = random.uniform(0, 1)  # Random distance in any direction
+
+                  x += distance * (x_bathroom - x) * abs(math.cos(angle))
+                  y += distance * (y_bathroom - y) * abs(math.sin(angle))
+
+                  x_values.append(x)
+                  y_values.append(y)
+
+                  if (x, y) == (x_bathroom, y_bathroom):
+                      break
+
+              return x_values, y_values
+
+          # Set the coordinates of the starting point and the bathroom
+          x_start = 0
+          y_start = 0
+          x_bathroom = 3
+          y_bathroom = 2
+
+          # Set the number of steps for the random walk
+          num_steps = 20
+
+          # Simulate the random walk to the bathroom
+          x, y = simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps)
+
+          # Plot the path with solid red line
+          plt.plot(x, y, '-o', color='red', linewidth=2)
+          plt.scatter(x_start, y_start, color='green', label='Starting Point')
+          plt.scatter(x_bathroom, y_bathroom, color='blue', label='Bathroom')
+          plt.title("Path to the Bathroom")
+          plt.xlabel("X-coordinate")
+          plt.ylabel("Y-coordinate")
+          plt.legend()
+          plt.grid(True)
+          plt.show()
+        </code></pre>
+    <p>Output is:</p>
+    <img src="Website-image/path-to-bathroom.png" alt="Your Image" style="width: 600px; height: 450px;">
+    <br><br>
+    <!-- Link to the previous section -->
+    <button onclick="scrollToSection('#dice-rolling')">Go to Dice Rolling</button>
+
+    <!-- Return button -->
+    <button onclick="window.scrollTo(0, 0)">Return to Top</button>
+    </div>
+
+
+    <script>
+      // JavaScript function to scroll to a specific section by ID
+      function scrollToSection(sectionId) {
+          const section = document.querySelector(sectionId);
+          if (section) {
+              section.scrollIntoView({ behavior: 'smooth' });
+          }
+      }
+  </script>
 </body>
 </html>

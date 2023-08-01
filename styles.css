@@ -156,5 +156,13 @@ h1 {
   font-size: 16px;
   line-height: 1.6;
 }
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+}
+
 
 /* Add more styles as needed */
