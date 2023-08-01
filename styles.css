@@ -2,13 +2,23 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
   background-color: #87ceeb; /* Light sky blue */
   background-image: linear-gradient(to top right, #4287a2, #0a250b); /* Gradient from light sky blue to white */
   color: #f9f9f9;
-}    
+  background-size: cover;
+  background-position: center;
+}
+
+/* Set the maximum width for the main content area */
+main {
+  margin: 0 auto; /* Center the content horizontally within the main area */
+  padding: 20px; /* Optional padding to create spacing between content and edges */
+}
 
 header {
   background-size: cover;
+  font-size: 25px;
   background-position: center;
   height: auto; /* Adjust the height to fit the content */
   text-align: center; /* Center the header content horizontally */
