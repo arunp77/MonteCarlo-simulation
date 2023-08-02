@@ -7,7 +7,8 @@
     <link rel="icon" type="image/png" href="./Website-image/favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<main>
   <header>
     <div class="header-container">
       <h1>Projects</h1>
@@ -196,14 +197,20 @@
           <button onclick="window.scrollTo(0, 0)">Return to Top</button>
   </div>
 </div>
-    <script>
-      // JavaScript function to scroll to a specific section by ID
-      function scrollToSection(sectionId) {
-          const section = document.querySelector(sectionId);
-          if (section) {
-              section.scrollIntoView({ behavior: 'smooth' });
-          }
+
+<!-- Footer -->
+<footer>
+  &copy; 2023 <a href="https://sites.google.com/view/aruncosmo/home" target="_blank">Arun Kumar Pandey</a>. All rights reserved.
+</footer>
+
+<script>
+  // JavaScript function to scroll to a specific section by ID
+  function scrollToSection(sectionId) {
+      const section = document.querySelector(sectionId);
+      if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
       }
-  </script>
-</body>
+  }
+</script>
+</main>
 </html>

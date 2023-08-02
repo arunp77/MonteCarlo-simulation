@@ -203,3 +203,47 @@ pre {
   }
 }
 
+/* Styling for the links in the navbar and dropdown menu */
+.navbar li a,
+.dropdown-content a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: #87ceeb; /* Light blue color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+}
+
+.navbar li a:hover,
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+  color: #0066cc; /* Darker blue color when hovered */
+}
+
+/* Styling for the links in the project list */
+.project-list li a {
+  text-decoration: none;
+  color: #f9f9f9; /* Set the font color to white */
+}
+
+.project-list li a:hover {
+  color: #0066cc; /* Light blue color when hovered */
+}
+
+/* Styling for the footer links */
+footer a {
+  text-decoration: none;
+  color: #87ceeb; /* Light blue color */
+  transition: color 0.3s ease; /* Add color transition */
+}
+
+footer a:hover {
+  color: #0066cc; /* Darker blue color when hovered */
+}
+
+/* Styling for the footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f0e0e;
+  color: #f9f9f9; /* Set the font color to white */
+}
