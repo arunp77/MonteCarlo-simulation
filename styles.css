@@ -64,13 +64,16 @@ header h1 {
   color: black; /* Change text color when hovered */
 }
 
+/* Styling for the dropdown menu */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #281f1f;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2; /* Set a higher z-index value for the dropdown menu */
 }
+
 
 .dropdown-content a {
   color: black;
@@ -139,11 +142,12 @@ h1 {
   }
 }
 
-/* Content class styles */
+/* Styling for the content (email section) */
 .content {
-  max-width: 1400px; /* Set a maximum width for the content */
-  margin: 30px auto; /* Center the content horizontally and add some space from the header */
+  max-width: 1400px;
+  margin: 30px auto;
   padding: 10px;
+  z-index: 1; /* Set a higher z-index value for the email section */
 }
 
 .content h2 {
@@ -259,7 +263,7 @@ footer {
   top: 50%;
   left: 100%;
   transform: translate(10px, -50%);
-  z-index: 999;
+  z-index: 1; /* Set a lower z-index value for the dropdown menu */
 }
 
 /* Styling for the container of the email link */
