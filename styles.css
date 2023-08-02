@@ -247,3 +247,21 @@ footer {
   background-color: #0f0e0e;
   color: #f9f9f9; /* Set the font color to white */
 }
+
+/* Styling for the disappearing message */
+.message {
+  display: none;
+  color: #f9f9f9;
+  background-color: #333;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* Styling for the container of the email link */
+.email-container {
+  position: relative;
+  display: inline-block;
+}

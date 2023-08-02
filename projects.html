@@ -46,171 +46,171 @@
     </div>
   </div>
 <!-- Main Content Area -->
-<div class="main-content">
-  <div class="content" id="dice-rolling">
-    <h2>1. Dice-rolling</h2>
-      <p>Simulating rolling a fair six-sided die and calculating the average value after a large number of rolls.</p>
-    <h3>Simulate Rolling the Die</h3>
-      <pre><code>
-        import matplotlib.pyplot as plt
-        import numpy as np
-        import random
-        num_rolls = 1000000  # Number of rolls
-        rolls = []  # List to store rolled values
-        sum_values = 0  # Variable to store the sum of rolled values
-        # Simulate rolling the die num_rolls times
-        for _ in range(num_rolls):
-            roll = random.randint(1, 6)  # Randomly generate a number between 1 and 6
-            rolls.append(roll)
-            sum_values += roll
-        average = sum_values / num_rolls  # Calculate the average value
-        print(f"The average value after {num_rolls} rolls is: {average}")
-        </code></pre>
-    <p>Output is:</p>
-      <pre>
-        <code>The average value after 1000000 rolls is: 3.500648</code>
-      </pre>
-      <br>
-    <!-- Link to the next section -->
-    <button onclick="scrollToSection('#random-walk-problem')">Go to Random Walk Problem</button>
-
-    <!-- Return button -->
-    <button onclick="window.scrollTo(0, 0)">Return to Top</button>
-  </div>
-
-  <div class="content" id="random-walk-problem">
-    <h2>2. Random-walk-problem</h2>
-      <p>How likely is it that a drunk can find the bathroom?</p>
-      <p>angular movement along with straight movemement</p>
-      <p>To simulate the random movement of your drunk friend in any direction and visualize the path to the bathroom, you can use the following modified Python code:</p>
-      <pre><code>
-          import random
-          import math
+  <div class="main-content">
+    <div class="content" id="dice-rolling">
+      <h2>1. Dice-rolling</h2>
+        <p>Simulating rolling a fair six-sided die and calculating the average value after a large number of rolls.</p>
+      <h3>Simulate Rolling the Die</h3>
+        <pre><code>
           import matplotlib.pyplot as plt
+          import numpy as np
+          import random
+          num_rolls = 1000000  # Number of rolls
+          rolls = []  # List to store rolled values
+          sum_values = 0  # Variable to store the sum of rolled values
+          # Simulate rolling the die num_rolls times
+          for _ in range(num_rolls):
+              roll = random.randint(1, 6)  # Randomly generate a number between 1 and 6
+              rolls.append(roll)
+              sum_values += roll
+          average = sum_values / num_rolls  # Calculate the average value
+          print(f"The average value after {num_rolls} rolls is: {average}")
+          </code></pre>
+      <p>Output is:</p>
+        <pre>
+          <code>The average value after 1000000 rolls is: 3.500648</code>
+        </pre>
+        <br>
+      <!-- Link to the next section -->
+      <button onclick="scrollToSection('#random-walk-problem')">Go to Random Walk Problem</button>
 
-          def simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps):
-              x = x_start  # Starting x-coordinate
-              y = y_start  # Starting y-coordinate
-              x_values = [x]  # List to store x-coordinates of each step
-              y_values = [y]  # List to store y-coordinates of each step
+      <!-- Return button -->
+      <button onclick="window.scrollTo(0, 0)">Return to Top</button>
+    </div>
 
-              for _ in range(num_steps):
-                  angle = random.uniform(0, 2 * 3.14159)  # Random angle in radians
-                  distance = random.uniform(0, 1)  # Random distance in any direction
+    <div class="content" id="random-walk-problem">
+      <h2>2. Random-walk-problem</h2>
+        <p>How likely is it that a drunk can find the bathroom?</p>
+        <p>angular movement along with straight movemement</p>
+        <p>To simulate the random movement of your drunk friend in any direction and visualize the path to the bathroom, you can use the following modified Python code:</p>
+        <pre><code>
+            import random
+            import math
+            import matplotlib.pyplot as plt
 
-                  x += distance * (x_bathroom - x) * abs(math.cos(angle))
-                  y += distance * (y_bathroom - y) * abs(math.sin(angle))
+            def simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps):
+                x = x_start  # Starting x-coordinate
+                y = y_start  # Starting y-coordinate
+                x_values = [x]  # List to store x-coordinates of each step
+                y_values = [y]  # List to store y-coordinates of each step
 
-                  x_values.append(x)
-                  y_values.append(y)
+                for _ in range(num_steps):
+                    angle = random.uniform(0, 2 * 3.14159)  # Random angle in radians
+                    distance = random.uniform(0, 1)  # Random distance in any direction
 
-                  if (x, y) == (x_bathroom, y_bathroom):
-                      break
+                    x += distance * (x_bathroom - x) * abs(math.cos(angle))
+                    y += distance * (y_bathroom - y) * abs(math.sin(angle))
 
-              return x_values, y_values
+                    x_values.append(x)
+                    y_values.append(y)
 
-          # Set the coordinates of the starting point and the bathroom
-          x_start = 0
-          y_start = 0
-          x_bathroom = 3
-          y_bathroom = 2
+                    if (x, y) == (x_bathroom, y_bathroom):
+                        break
 
-          # Set the number of steps for the random walk
-          num_steps = 20
+                return x_values, y_values
 
-          # Simulate the random walk to the bathroom
-          x, y = simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps)
+            # Set the coordinates of the starting point and the bathroom
+            x_start = 0
+            y_start = 0
+            x_bathroom = 3
+            y_bathroom = 2
 
-          # Plot the path with solid red line
-          plt.plot(x, y, '-o', color='red', linewidth=2)
-          plt.scatter(x_start, y_start, color='green', label='Starting Point')
-          plt.scatter(x_bathroom, y_bathroom, color='blue', label='Bathroom')
-          plt.title("Path to the Bathroom")
-          plt.xlabel("X-coordinate")
-          plt.ylabel("Y-coordinate")
-          plt.legend()
-          plt.grid(True)
-          plt.show()
-        </code></pre>
-    <p>Output is:</p>
-    <img src="Website-image/path-to-bathroom.png" alt="Your Image" style="width: 600px; height: 450px;">
-    <br><br>
-    <!-- Link to the previous section -->
-    <button onclick="scrollToSection('#dice-rolling')">Go to Dice Rolling</button>
+            # Set the number of steps for the random walk
+            num_steps = 20
 
-    <!-- Return button -->
-    <button onclick="window.scrollTo(0, 0)">Return to Top</button>
-  </div>
+            # Simulate the random walk to the bathroom
+            x, y = simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps)
 
-  <div class="content" id="Financial-Sector-Risks">
-    <h2>3. Analyzing Financial Sector Risks: The Role of Monte Carlo Simulation</h2>
-      <h3>Introduction:</h3>
-        <ul>
-            In the fast-paced and ever-changing world of finance, understanding and managing risks is crucial for investors, businesses, and institutions alike. 
-              The financial sector, with its intricate web of interconnected markets and complex instruments, is inherently exposed to various risks that can have significant 
-              repercussions on the global economy. In this blog post, I will delve into the world of risk analysis in the financial sector, and more specifically, 
-              the invaluable role of Monte Carlo simulation in managing these risks.
-        </ul>
-      <h3>Understanding Financial Sector Risks:</h3>
-        <ul>The financial sector is no stranger to risks. From market volatility and credit defaults to liquidity crunches and operational failures, 
-          the list of potential pitfalls is extensive. These risks can arise due to economic shifts, geopolitical events, policy changes, or even unexpected 
-          black swan events. For decision-makers and investors, comprehending the likelihood and impact of these risks is of paramount importance.
-        </ul>
-      <h3>Enter Monte Carlo Simulation:</h3>
-        <ul>Monte Carlo simulation, a powerful computational technique, has gained immense popularity in the finance industry for its ability to analyze complex 
-          systems and produce reliable risk assessments. Named after the famed Monte Carlo Casino, where randomness is at the heart of games, this method leverages 
-          random sampling to simulate thousands or even millions of possible scenarios.
-        </ul>
-        <h3>The Role of Monte Carlo Simulation in Risk Analysis:</h3>
-        Monte Carlo simulation plays a pivotal role in risk analysis in the financial sector by addressing the inherent uncertainties that underpin financial markets. Here's how it works:
+            # Plot the path with solid red line
+            plt.plot(x, y, '-o', color='red', linewidth=2)
+            plt.scatter(x_start, y_start, color='green', label='Starting Point')
+            plt.scatter(x_bathroom, y_bathroom, color='blue', label='Bathroom')
+            plt.title("Path to the Bathroom")
+            plt.xlabel("X-coordinate")
+            plt.ylabel("Y-coordinate")
+            plt.legend()
+            plt.grid(True)
+            plt.show()
+          </code></pre>
+      <p>Output is:</p>
+      <img src="Website-image/path-to-bathroom.png" alt="Your Image" style="width: 600px; height: 450px;">
+      <br><br>
+      <!-- Link to the previous section -->
+      <button onclick="scrollToSection('#dice-rolling')">Go to Dice Rolling</button>
+
+      <!-- Return button -->
+      <button onclick="window.scrollTo(0, 0)">Return to Top</button>
+    </div>
+
+    <div class="content" id="Financial-Sector-Risks">
+      <h2>3. Analyzing Financial Sector Risks: The Role of Monte Carlo Simulation</h2>
+        <h3>Introduction:</h3>
           <ul>
-            <li><b>Modeling Uncertainties:</b> Financial markets are influenced by countless factors, many of which are difficult to predict with certainty. 
-              Monte Carlo simulation allows us to model these uncertainties as probability distributions, capturing the range of potential outcomes.</li>
-            <li><b>Simulating Scenarios:</b> By repeatedly sampling from these probability distributions, Monte Carlo simulation generates a vast array of 
-              possible scenarios. Each scenario represents a different combination of inputs, market movements, and economic conditions.</li>
-            <li><b>Assessing Risk Metrics:</b> With a multitude of simulated scenarios at hand, various risk metrics can be computed, such as Value-at-Risk (VaR), 
-              Conditional Value-at-Risk (CVaR), and stress testing results. These metrics offer valuable insights into the likelihood of different 
-              risk levels and potential losses.</li>
-            <li><b>Stress Testing and Sensitivity Analysis:</b> Monte Carlo simulation is particularly useful for stress testing financial models. 
-              It allows analysts to examine how changes in key variables, like interest rates or exchange rates, impact the overall risk exposure.</li>
-        </ul>
-        <h3>Benefits of Monte Carlo Simulation:</h3>
-        <ul>
-          <li><b>Enhanced Decision-Making:</b> Monte Carlo simulation provides decision-makers with a comprehensive understanding of potential risks, enabling more informed and confident choices.</li>
-          <li><b>Flexibility and Scalability:</b> This technique can be applied to a wide range of financial models, from simple single-asset portfolios to complex derivatives and structured products.</li>
-          <li><b>Tail Risk Analysis:</b> Monte Carlo simulation excels in assessing tail risk, or extreme events, which are often challenging to estimate through traditional statistical methods.</li>
-        </ul>
-        <ul>
-          <h3>Conclusion:</h3>
-          In conclusion, Monte Carlo simulation has emerged as an indispensable tool in managing risks within the financial sector. 
-          By modeling uncertainties, simulating scenarios, and assessing various risk metrics, decision-makers can gain valuable insights and fortify their strategies against adverse events.
-          To learn more about Monte Carlo simulation and its application in the financial sector, feel free to visit my comprehensive blog post at: 
-          <a href="https://medium.com/@arunp77/monte-carlo-simulation-828a463b8772">Monte Carlo Simulation in the Financial Sector</a>.
-          Remember, in the world of finance, knowledge is power, and embracing innovative techniques like Monte Carlo simulation can make all the 
-          difference in navigating the uncertain waters of the financial market. Stay informed, stay vigilant, and may your financial decisions be ever prosperous!
-        </ul>
-        <br><br>
-          <!-- Link to the previous section -->
-          <button onclick="scrollToSection('#random-walk-problem')">Random walk problem</button>
+              In the fast-paced and ever-changing world of finance, understanding and managing risks is crucial for investors, businesses, and institutions alike. 
+                The financial sector, with its intricate web of interconnected markets and complex instruments, is inherently exposed to various risks that can have significant 
+                repercussions on the global economy. In this blog post, I will delve into the world of risk analysis in the financial sector, and more specifically, 
+                the invaluable role of Monte Carlo simulation in managing these risks.
+          </ul>
+        <h3>Understanding Financial Sector Risks:</h3>
+          <ul>The financial sector is no stranger to risks. From market volatility and credit defaults to liquidity crunches and operational failures, 
+            the list of potential pitfalls is extensive. These risks can arise due to economic shifts, geopolitical events, policy changes, or even unexpected 
+            black swan events. For decision-makers and investors, comprehending the likelihood and impact of these risks is of paramount importance.
+          </ul>
+        <h3>Enter Monte Carlo Simulation:</h3>
+          <ul>Monte Carlo simulation, a powerful computational technique, has gained immense popularity in the finance industry for its ability to analyze complex 
+            systems and produce reliable risk assessments. Named after the famed Monte Carlo Casino, where randomness is at the heart of games, this method leverages 
+            random sampling to simulate thousands or even millions of possible scenarios.
+          </ul>
+          <h3>The Role of Monte Carlo Simulation in Risk Analysis:</h3>
+          Monte Carlo simulation plays a pivotal role in risk analysis in the financial sector by addressing the inherent uncertainties that underpin financial markets. Here's how it works:
+            <ul>
+              <li><b>Modeling Uncertainties:</b> Financial markets are influenced by countless factors, many of which are difficult to predict with certainty. 
+                Monte Carlo simulation allows us to model these uncertainties as probability distributions, capturing the range of potential outcomes.</li>
+              <li><b>Simulating Scenarios:</b> By repeatedly sampling from these probability distributions, Monte Carlo simulation generates a vast array of 
+                possible scenarios. Each scenario represents a different combination of inputs, market movements, and economic conditions.</li>
+              <li><b>Assessing Risk Metrics:</b> With a multitude of simulated scenarios at hand, various risk metrics can be computed, such as Value-at-Risk (VaR), 
+                Conditional Value-at-Risk (CVaR), and stress testing results. These metrics offer valuable insights into the likelihood of different 
+                risk levels and potential losses.</li>
+              <li><b>Stress Testing and Sensitivity Analysis:</b> Monte Carlo simulation is particularly useful for stress testing financial models. 
+                It allows analysts to examine how changes in key variables, like interest rates or exchange rates, impact the overall risk exposure.</li>
+          </ul>
+          <h3>Benefits of Monte Carlo Simulation:</h3>
+          <ul>
+            <li><b>Enhanced Decision-Making:</b> Monte Carlo simulation provides decision-makers with a comprehensive understanding of potential risks, enabling more informed and confident choices.</li>
+            <li><b>Flexibility and Scalability:</b> This technique can be applied to a wide range of financial models, from simple single-asset portfolios to complex derivatives and structured products.</li>
+            <li><b>Tail Risk Analysis:</b> Monte Carlo simulation excels in assessing tail risk, or extreme events, which are often challenging to estimate through traditional statistical methods.</li>
+          </ul>
+          <ul>
+            <h3>Conclusion:</h3>
+            In conclusion, Monte Carlo simulation has emerged as an indispensable tool in managing risks within the financial sector. 
+            By modeling uncertainties, simulating scenarios, and assessing various risk metrics, decision-makers can gain valuable insights and fortify their strategies against adverse events.
+            To learn more about Monte Carlo simulation and its application in the financial sector, feel free to visit my comprehensive blog post at: 
+            <a href="https://medium.com/@arunp77/monte-carlo-simulation-828a463b8772">Monte Carlo Simulation in the Financial Sector</a>.
+            Remember, in the world of finance, knowledge is power, and embracing innovative techniques like Monte Carlo simulation can make all the 
+            difference in navigating the uncertain waters of the financial market. Stay informed, stay vigilant, and may your financial decisions be ever prosperous!
+          </ul>
+          <br><br>
+            <!-- Link to the previous section -->
+            <button onclick="scrollToSection('#random-walk-problem')">Random walk problem</button>
 
-          <!-- Return button -->
-          <button onclick="window.scrollTo(0, 0)">Return to Top</button>
-  </div>
-</div>
+            <!-- Return button -->
+            <button onclick="window.scrollTo(0, 0)">Return to Top</button>
+    </div>
+    </div>
 
-<!-- Footer -->
-<footer>
-  &copy; 2023 <a href="https://sites.google.com/view/aruncosmo/home" target="_blank">Arun Kumar Pandey</a>. All rights reserved.
-</footer>
+    <!-- Footer -->
+    <footer>
+      &copy; 2023 <a href="https://sites.google.com/view/aruncosmo/home" target="_blank">Arun Kumar Pandey</a>. All rights reserved.
+    </footer>
 
-<script>
-  // JavaScript function to scroll to a specific section by ID
-  function scrollToSection(sectionId) {
-      const section = document.querySelector(sectionId);
-      if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
+    <script>
+      // JavaScript function to scroll to a specific section by ID
+      function scrollToSection(sectionId) {
+          const section = document.querySelector(sectionId);
+          if (section) {
+              section.scrollIntoView({ behavior: 'smooth' });
+          }
       }
-  }
-</script>
+  </script>
 </main>
 </html>
