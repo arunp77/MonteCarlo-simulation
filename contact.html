@@ -36,12 +36,36 @@
 
   <div class="content">
     <div class="email-container">
-      <!-- Add an id to the email link to make it accessible via JavaScript -->
-      You can contact me via email at:
-      <a href="#" id="email-link">arunp77@gmail.com</a>
-      <div class="message" id="copied-message">Copied..</div>
+        <!-- Add an id to the email link to make it accessible via JavaScript -->
+        You can contact me via email at:
+        <a href="#" id="email-link">arunp77@gmail.com</a>
+        <span class="copied-message" id="copied-message">Copied</span>
     </div>
-    </div>
+  </div>
+
+  <script>
+    // JavaScript to handle the click event
+    document.getElementById('email-link').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+        const email = 'arunp77@gmail.com';
+        copyToClipboard(email); // Call the function to copy the email address to the clipboard
+        const message = document.getElementById('copied-message');
+        message.style.display = 'inline-block'; // Show the message
+        setTimeout(function () {
+            message.style.display = 'none'; // Hide the message after a delay
+        }, 2000); // The message will disappear after 2000 milliseconds (2 seconds)
+    });
+
+    // Function to copy the email address to the clipboard
+    function copyToClipboard(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+    }
+  </script>
 
   <!-- Footer -->
   <footer>
