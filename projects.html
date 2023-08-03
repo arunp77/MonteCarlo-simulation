@@ -392,9 +392,9 @@
                   <ul>
                       <li><strong>Historical VaR:</strong>
                       Historical VaR is based on historical data and does not rely on any specific distribution assumption. The historical method looks at one’s prior returns history and orders them from worst losses to greatest gains—following from the premise that past returns experience will inform future outcomes. It calculates VaR using the historical distribution of portfolio returns. The formula for Historical VaR is:
-                          <div style="border: 1px solid #ff3377; padding: 20px; width: 600px">
-                              Historical VaR = Portfolio Value * (1 - Confidence Level) * Return at the Selected Percentile
-                          </div>
+                          <br><br>
+                          <p>Historical VaR = Portfolio Value * (1 - Confidence Level) * Return at the Selected Percentile</p>
+                          <br>
                           <p>where:</p>
                           <ul>
                               <li><strong>VaR:</strong> Value-at-Risk<br>
@@ -403,9 +403,9 @@
                           </ul>
                       </li>
                       <li><strong>Parametric VaR (Variance-Covariance Method):</strong> Rather than assuming that the past will inform the future, the variance-covariance method, also called the parametric method, instead assumes that gains and losses are normally distributed. This way, potential losses can be framed in terms of standard deviation events from the mean. It is one of the most commonly used formula is the Parametric VaR, which assumes that the portfolio returns follow a normal distribution.
-                          <div style="border: 1px solid #ff3377; padding: 16px; width: 400px">
-                          VaR = Portfolio Value × z-score × Standard Deviation
-                          </div>
+                        <br><br>
+                          <p>VaR = Portfolio Value × z-score × Standard Deviation</p>
+                        <br>
                           <p>where:</p>
                           <ul>
                               <li><strong>VaR:</strong> Value-at-Risk<br>
@@ -417,9 +417,9 @@
                       <li><strong>Monte Carlo VaR:</strong>
                       A third approach to VaR is to conduct a Monte Carlo simulation. This technique uses computational models to simulate projected returns over hundreds or thousands of possible iterations. Then, it takes the chances that a loss will occur—say, 5% of the time—and reveals the impact.</p>
                       Monte Carlo VaR uses random simulations to generate a range of possible portfolio returns and estimates VaR based on the distribution of these simulated returns. The formula for Monte Carlo VaR is:
-                          <div style="border: 1px solid #ff3377; padding: 10px; width: 600px">
-                              VaR = Portfolio Value × (1 - Confidence Level)th Quantile of Simulated Returns
-                          </div>
+                          <br><br>
+                          <p>VaR = Portfolio Value × (1 - Confidence Level)th Quantile of Simulated Returns</p>
+                          <br>
                           <p>where:</p>
                           <ul>
                               <li><strong>VaR:</strong> Value-at-Risk<br>
@@ -443,9 +443,9 @@
                     <p>Expected Loss (EL) is a risk measure used in financial analysis to estimate the average or expected amount of loss that an organization or portfolio is likely to experience over a given time period. It combines the probability of various loss scenarios with the corresponding potential losses.</p>
                     <ul>
                         <li>The formula to calculate Expected Loss (EL) is:</li>
-                            <div style="border: 1px solid #ff3377; padding: 10px; width: 700px">
-                                EL = Probability of Default (PD) × Exposure at Default (EAD) × Loss Given Default (LGD)
-                            </div>
+                              <br><br>
+                                <p>EL = Probability of Default (PD) × Exposure at Default (EAD) × Loss Given Default (LGD)</p>
+                              <br>
                             <p>where:</p>
                             <ul>
                                 <li>Probability of Default (PD) represents the likelihood or probability that a borrower or counterparty will default on their obligations within a specified time horizon.</li>
@@ -462,9 +462,9 @@
                       <p>Conditional Value-at-Risk (CVaR), also known as Expected Shortfall (ES), is a risk measure that quantifies the expected loss beyond a certain confidence level. Unlike Value-at-Risk (VaR), which only provides information about the worst-case loss at a specific confidence level, CVaR provides an estimate of the average loss that may occur in the tail of the distribution beyond the VaR threshold.</p>
                       <ul>
                           <li>The formula to calculate CVaR is as follows::</li>
-                              <div style="border: 1px solid #ff3377; padding: 10px; width: 700px">
-                                  CVaR = (1 / (1 - α)) * ∫[α, 1] f(x) * x dx
-                              </div>
+                              <br><br>
+                                <p>CVaR = (1 / (1 - α)) * ∫[α, 1] f(x) * x dx</p>
+                              <br>
                               <ul>
                                   <li>Probability of Default (PD) represents the likelihood or probability that a borrower or counterparty will default on their obligations within a specified time horizon.</li>
                                   <li>Exposure at Default (EAD) refers to the amount of exposure or the total value of outstanding loans or commitments at the time of default.</li>
