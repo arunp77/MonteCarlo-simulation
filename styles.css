@@ -16,6 +16,7 @@ main {
   padding: 20px; /* Optional padding to create spacing between content and edges */
 }
 
+/* Header format */
 header {
   background-size: cover;
   font-size: 25px;
@@ -26,8 +27,11 @@ header {
   /* Add the opacity value to the background image */
   background-color: rgba(0, 0, 0, 0.6); /* The last value (0.6) sets the opacity to 60% */
 }
-
 .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
   text-align: center;
 }
 header h1 {
@@ -35,25 +39,40 @@ header h1 {
   margin-left: 10px;
   color: white; /* Set the text color to white */
 }
-.profile-image {
-  max-width: 100%; /* Add this to limit the image width */
-  height: auto; /* Maintain aspect ratio */
+h1 {
+  font-size: 40px;
+  margin-left: 10px;
 }
+
+/*Profile photo */
 .centered-image {
   display: block;
   margin: 0 auto;
 }
+.profile-image {
+  width: 250px; /* Adjust the width as needed */
+  height: auto; /* Adjust the height as needed */
+  border-radius: 15%; /* To create a circular image */
+  margin-left: auto;
+  transition: box-shadow 0.3s ease;
+  max-width: 100%; /* Add this to limit the image width */
+  height: auto; /* Maintain aspect ratio */
+}
+.profile-image:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Customize the box shadow effect */
+}
+
+
+/* Nevigation format */
 .navbar {
   background-color: #333; /* Set the background color of the navigation bar */
   overflow: hidden;
   padding-top: 10px; /* Reduce the top padding to decrease space */
 }
-
 .navbar li {
   float: none;
   display: inline-block;
 }
-
 .navbar li a {
   display: block;
   padding: 16px;
@@ -61,10 +80,24 @@ header h1 {
   color: rgb(246, 239, 239);
   transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
 }
-
 .navbar li a:hover {
   background-color: #f9f9f9;
   color: black; /* Change text color when hovered */
+}
+/* Styling for the links in the navbar and dropdown menu */
+.navbar li a,
+.dropdown-content a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: #87ceeb; /* Light blue color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+}
+
+.navbar li a:hover,
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+  color: #0066cc; /* Darker blue color when hovered */
 }
 
 /* Styling for the dropdown menu */
@@ -76,8 +109,6 @@ header h1 {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 2; /* Set a higher z-index value for the dropdown menu */
 }
-
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -85,37 +116,11 @@ header h1 {
   display: block;
   transition: background-color 0.3s ease;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 .dropdown-content a:hover {
   background-color: red;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 40px;
-  margin-left: 10px;
-}
-
-.profile-image {
-  width: 250px; /* Adjust the width as needed */
-  height: auto; /* Adjust the height as needed */
-  border-radius: 15%; /* To create a circular image */
-  margin-left: auto;
-  transition: box-shadow 0.3s ease;
-}
-
-.profile-image:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Customize the box shadow effect */
 }
 
 #typing-text {
@@ -145,6 +150,13 @@ h1 {
   }
 }
 
+@media screen and (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 /* Styling for the content (email section) */
 .content {
   max-width: 1400px;
@@ -152,23 +164,19 @@ h1 {
   padding: 10px;
   z-index: 1; /* Set a higher z-index value for the email section */
 }
-
 .content h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
-
 .content p {
   font-size: 14px;
   line-height: 1.6;
 }
-
 .content ul {
   list-style-type: disc;
   margin-left: 20px;
   margin-bottom: 20px;
 }
-
 .content li {
   font-size: 14px;
   line-height: 1.6;
@@ -201,29 +209,6 @@ pre {
 }
 .project-list li a:hover {
   color: #0066cc;
-}
-
-@media screen and (max-width: 768px) {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-/* Styling for the links in the navbar and dropdown menu */
-.navbar li a,
-.dropdown-content a {
-  display: block;
-  padding: 16px;
-  text-decoration: none;
-  color: #87ceeb; /* Light blue color */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
-}
-
-.navbar li a:hover,
-.dropdown-content a:hover {
-  background-color: #f9f9f9;
-  color: #0066cc; /* Darker blue color when hovered */
 }
 
 /* Styling for the links in the project list */
