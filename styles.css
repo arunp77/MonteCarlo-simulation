@@ -39,7 +39,10 @@ header h1 {
   max-width: 100%; /* Add this to limit the image width */
   height: auto; /* Maintain aspect ratio */
 }
-
+.centered-image {
+  display: block;
+  margin: 0 auto;
+}
 .navbar {
   background-color: #333; /* Set the background color of the navigation bar */
   overflow: hidden;
