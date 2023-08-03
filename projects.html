@@ -52,19 +52,19 @@
         <p>Simulating rolling a fair six-sided die and calculating the average value after a large number of rolls.</p>
       <h3>Simulate Rolling the Die</h3>
         <pre><code>
-          import matplotlib.pyplot as plt
-          import numpy as np
-          import random
-          num_rolls = 1000000  # Number of rolls
-          rolls = []  # List to store rolled values
-          sum_values = 0  # Variable to store the sum of rolled values
-          # Simulate rolling the die num_rolls times
-          for _ in range(num_rolls):
-              roll = random.randint(1, 6)  # Randomly generate a number between 1 and 6
-              rolls.append(roll)
-              sum_values += roll
-          average = sum_values / num_rolls  # Calculate the average value
-          print(f"The average value after {num_rolls} rolls is: {average}")
+        import matplotlib.pyplot as plt
+        import numpy as np
+        import random
+        num_rolls = 1000000  # Number of rolls
+        rolls = []  # List to store rolled values
+        sum_values = 0  # Variable to store the sum of rolled values
+        # Simulate rolling the die num_rolls times
+        for _ in range(num_rolls):
+            roll = random.randint(1, 6)  # Randomly generate a number between 1 and 6
+            rolls.append(roll)
+            sum_values += roll
+        average = sum_values / num_rolls  # Calculate the average value
+        print(f"The average value after {num_rolls} rolls is: {average}")
           </code></pre>
       <p>Output is:</p>
         <pre>
@@ -84,53 +84,53 @@
         <p>angular movement along with straight movemement</p>
         <p>To simulate the random movement of your drunk friend in any direction and visualize the path to the bathroom, you can use the following modified Python code:</p>
         <pre><code>
-            import random
-            import math
-            import matplotlib.pyplot as plt
+          import random
+          import math
+          import matplotlib.pyplot as plt
 
-            def simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps):
-                x = x_start  # Starting x-coordinate
-                y = y_start  # Starting y-coordinate
-                x_values = [x]  # List to store x-coordinates of each step
-                y_values = [y]  # List to store y-coordinates of each step
+          def simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps):
+              x = x_start  # Starting x-coordinate
+              y = y_start  # Starting y-coordinate
+              x_values = [x]  # List to store x-coordinates of each step
+              y_values = [y]  # List to store y-coordinates of each step
 
-                for _ in range(num_steps):
-                    angle = random.uniform(0, 2 * 3.14159)  # Random angle in radians
-                    distance = random.uniform(0, 1)  # Random distance in any direction
+              for _ in range(num_steps):
+                  angle = random.uniform(0, 2 * 3.14159)  # Random angle in radians
+                  distance = random.uniform(0, 1)  # Random distance in any direction
 
-                    x += distance * (x_bathroom - x) * abs(math.cos(angle))
-                    y += distance * (y_bathroom - y) * abs(math.sin(angle))
+                  x += distance * (x_bathroom - x) * abs(math.cos(angle))
+                  y += distance * (y_bathroom - y) * abs(math.sin(angle))
 
-                    x_values.append(x)
-                    y_values.append(y)
+                  x_values.append(x)
+                  y_values.append(y)
 
-                    if (x, y) == (x_bathroom, y_bathroom):
-                        break
+                  if (x, y) == (x_bathroom, y_bathroom):
+                      break
 
-                return x_values, y_values
+              return x_values, y_values
 
-            # Set the coordinates of the starting point and the bathroom
-            x_start = 0
-            y_start = 0
-            x_bathroom = 3
-            y_bathroom = 2
+          # Set the coordinates of the starting point and the bathroom
+          x_start = 0
+          y_start = 0
+          x_bathroom = 3
+          y_bathroom = 2
 
-            # Set the number of steps for the random walk
-            num_steps = 20
+          # Set the number of steps for the random walk
+          num_steps = 20
 
-            # Simulate the random walk to the bathroom
-            x, y = simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps)
+          # Simulate the random walk to the bathroom
+          x, y = simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps)
 
-            # Plot the path with solid red line
-            plt.plot(x, y, '-o', color='red', linewidth=2)
-            plt.scatter(x_start, y_start, color='green', label='Starting Point')
-            plt.scatter(x_bathroom, y_bathroom, color='blue', label='Bathroom')
-            plt.title("Path to the Bathroom")
-            plt.xlabel("X-coordinate")
-            plt.ylabel("Y-coordinate")
-            plt.legend()
-            plt.grid(True)
-            plt.show()
+          # Plot the path with solid red line
+          plt.plot(x, y, '-o', color='red', linewidth=2)
+          plt.scatter(x_start, y_start, color='green', label='Starting Point')
+          plt.scatter(x_bathroom, y_bathroom, color='blue', label='Bathroom')
+          plt.title("Path to the Bathroom")
+          plt.xlabel("X-coordinate")
+          plt.ylabel("Y-coordinate")
+          plt.legend()
+          plt.grid(True)
+          plt.show()
           </code></pre>
       <p>Output is:</p>
       <img src="Website-image/path-to-bathroom.png" alt="Your Image" style="width: 600px; height: 450px;">
