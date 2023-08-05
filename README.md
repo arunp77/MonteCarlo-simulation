@@ -14,5 +14,6 @@ Monte Carlo simulation is a powerful technique for modeling and analyzing comple
 - Variance Reduction Techniques
 - Applications of Monte Carlo Simulation
 
-![Python Jupyter Notebook](https://img.shields.io/badge/Python-Jupyter%20Notebook-orange) ![Monte Carlo Simulations](https://img.shields.io/badge/Monte%20Carlo%20Simulations-blue)
+![Python Jupyter Notebook](https://img.shields.io/badge/Python-Jupyter%20Notebook-orange) ![Monte Carlo Simulations](https://img.shields.io/badge/Monte%20Carlo%20Simulations-blue) ![HTML/CSS](https://img.shields.io/badge/HTML%2FCSS-Included-blue)
+
 
