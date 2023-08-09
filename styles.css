@@ -62,7 +62,6 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Customize the box shadow effect */
 }
 
-
 /* Nevigation format */
 .navbar {
   background-color: #333; /* Set the background color of the navigation bar */
@@ -154,6 +153,10 @@ h1 {
   /* Adjust styles for smaller screens */
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* Styling for the content (email section) */
 .content {
