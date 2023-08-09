@@ -19,23 +19,23 @@
     </div>
   </header>
 
-    <!-- Navigation Menu -->
-    <nav>
-      <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Social</a>
-          <div class="dropdown-content">
-            <a href="https://sites.google.com/view/aruncosmo/home">My webpage</a>
-            <a href="https://github.com/arunsinp">GitHub</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-   <!-- Left Sidebar -->
-   <div class="left-sidebar">
+  <!-- Navigation Menu -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Social</a>
+        <div class="dropdown-content">
+          <a href="https://sites.google.com/view/aruncosmo/home">My webpage</a>
+          <a href="https://github.com/arunsinp">GitHub</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+    <!-- Left Sidebar -->
+  <div class="left-sidebar">
     <div class="project-list">
       <h3>Content</h3>
       <ul>
@@ -46,7 +46,7 @@
       </ul>
     </div>
   </div>
-<!-- Main Content Area -->
+  <!-- Main Content Area -->
   <div class="main-content">
     <!----------------------- Example - 1  ----------------------------->
     <div class="content" id="dice-rolling">
@@ -67,7 +67,7 @@
             sum_values += roll
         average = sum_values / num_rolls  # Calculate the average value
         print(f"The average value after {num_rolls} rolls is: {average}")
-          </code></pre>
+        </code></pre>
       <p>Output is:</p>
         <pre>
           <code>The average value after 1000000 rolls is: 3.500648</code>
@@ -91,13 +91,11 @@
           import random
           import math
           import matplotlib.pyplot as plt
-
           def simulate_random_walk(x_start, y_start, x_bathroom, y_bathroom, num_steps):
               x = x_start  # Starting x-coordinate
               y = y_start  # Starting y-coordinate
               x_values = [x]  # List to store x-coordinates of each step
               y_values = [y]  # List to store y-coordinates of each step
-
               for _ in range(num_steps):
                   angle = random.uniform(0, 2 * 3.14159)  # Random angle in radians
                   distance = random.uniform(0, 1)  # Random distance in any direction
@@ -135,13 +133,12 @@
           plt.legend()
           plt.grid(True)
           plt.show()
-          </code></pre>
+        </code></pre>
       <p>Output is:</p>
       <img src="Website-image/path-to-bathroom.png" alt="Your Image" style="width: 600px; height: 450px;">
       <br><br>
       <!-- Link to the previous section -->
       <button onclick="scrollToSection('#dice-rolling')">Go to Dice Rolling</button>
-
       <!-- Return button -->
       <button onclick="window.scrollTo(0, 0)">Return to Top</button>
     </div>
@@ -195,11 +192,10 @@
             difference in navigating the uncertain waters of the financial market. Stay informed, stay vigilant, and may your financial decisions be ever prosperous!
           </ul>
           <br><br>
-            <!-- Link to the previous section -->
-            <button onclick="scrollToSection('#random-walk-problem')">Random walk problem</button>
-
-            <!-- Return button -->
-            <button onclick="window.scrollTo(0, 0)">Return to Top</button>
+          <!-- Link to the previous section -->
+          <button onclick="scrollToSection('#random-walk-problem')">Random walk problem</button>
+          <!-- Return button -->
+          <button onclick="window.scrollTo(0, 0)">Return to Top</button>
     </div>
     
     <!----------------------- Example - 4  ----------------------------->
@@ -300,70 +296,70 @@
                   </tr>
                 </table>
               </ul>
-          <h3>Types of risks analyzed in the financial banking sector</h3>
+        <h3>Types of risks analyzed in the financial banking sector</h3>
+          <ul>
+            <h3>1. Credit risk</h3>
+            <p>Credit risk refers to the potential for financial losses resulting from the failure of a borrower or counterparty to 
+              fulfill their financial obligations. It arises when borrowers or counterparties are unable to repay their loans or meet 
+              their contractual obligations. This risk can be mitigated through credit assessments, collateral requirements, 
+              diversification of credit exposures, and the use of credit derivatives.</p>
+            <p><b>Example:</b> A bank lending money to individuals or businesses faces credit risk. If a borrower defaults on their 
+              loan payments, the bank may suffer financial losses.</p>
+            <p><b>Parameters used to calaculate credit risk:</b> To calculate credit risk, several parameters are commonly used. 
+              These parameters help assess the creditworthiness of borrowers and estimate the likelihood and potential impact of default. 
+              Here are some key parameters used in credit risk analysis:</p>
             <ul>
-              <h3>1. Credit risk</h3>
-              <p>Credit risk refers to the potential for financial losses resulting from the failure of a borrower or counterparty to 
-                fulfill their financial obligations. It arises when borrowers or counterparties are unable to repay their loans or meet 
-                their contractual obligations. This risk can be mitigated through credit assessments, collateral requirements, 
-                diversification of credit exposures, and the use of credit derivatives.</p>
-              <p><b>Example:</b> A bank lending money to individuals or businesses faces credit risk. If a borrower defaults on their 
-                loan payments, the bank may suffer financial losses.</p>
-              <p><b>Parameters used to calaculate credit risk:</b> To calculate credit risk, several parameters are commonly used. 
-                These parameters help assess the creditworthiness of borrowers and estimate the likelihood and potential impact of default. 
-                Here are some key parameters used in credit risk analysis:</p>
-              <ul>
-                <li>Probability of Default (PD)</li>
-                <li>Loss Given Default (LGD)</li>
-                <li>Exposure at Default (EAD)</li>
-                <li>Credit Rating</li>
-                <li>Financial Ratios and Indicators</li>
-                <li>Collateral and Guarantees</li>
-                <li>Industry and Economic Factors</li>
-              </ul>
-              <h3>2. Market risk</h3>
-              <p>Market risk models and methodologies are used by financial institutions to assess and manage potential losses 
-                arising from changes in market conditions, such as fluctuations in interest rates, exchange rates, commodity prices, 
-                and equity prices. These models and methodologies help quantify and monitor market risk exposures and assist in making 
-                informed risk management decisions.</p>
-                <p><b>Example:</b> An investment fund holding a portfolio of stocks is exposed to market risk. If the stock prices decline 
-                  due to market downturns, the fund's value may decrease.</p>
-                <ul>
-                  <p>Here are some commonly used market risk models and methodologies:</p>
-                  <li>Value at Risk (VaR)</li>
-                  <li>Expected Shortfall (ES)</li>
-                  <li>Stress Testing</li>
-                  <li>Conditional Value at Risk (CVaR)</li>
-                </ul>
-                <h3>3. Liquidity risk</h3>
-                  <p>Liquidity risk refers to the potential difficulty of buying or selling an investment quickly and at a fair price 
-                    without causing significant price changes. It arises from insufficient market liquidity or an inability to convert 
-                    assets into cash when needed. Liquidity risk can be managed by maintaining adequate cash reserves, diversifying 
-                    funding sources, and establishing contingency funding plans.</p>
-                  <p><b>Example:</b> A mutual fund holding illiquid assets, such as real estate or private equity, may face liquidity risk 
-                    if investors want to redeem their shares, but the fund struggles to sell the underlying assets quickly.</p>
-                <h3>4. Operational risk</h3>
-                  <p>Operational risk is the potential for losses resulting from inadequate or failed internal processes, 
-                    systems, human errors, or external events. It encompasses risks related to technology, fraud, legal 
-                    compliance, and business continuity. Operational risk can be mitigated through proper internal controls, 
-                    staff training, disaster recovery plans, and risk monitoring.</p>
-                  <p><b>Example:</b> A cyber-attack on a financial institution's systems that compromises customer data and disrupts 
-                    operations represents operational risk.</p>
-                <h3>5. Regulatory Risk</h3>
-                  <p>Regulatory risk arises from changes in laws, regulations, or government policies that impact the financial industry. 
-                    It includes the risk of non-compliance with applicable regulations, which can lead to financial penalties, reputational 
-                    damage, or restrictions on business activities. Regulatory risk can be managed through robust compliance programs, 
-                    staying updated on regulatory changes, and engaging with regulatory authorities.</p>
-                  <p><b>Example:</b> A bank faces regulatory risk if new legislation imposes stricter capital requirements, 
-                    necessitating adjustments to its operations and capital structure.</p>
-                <h3>6. Reputational Risk</h3>
-                  <p>Reputational risk refers to the potential loss of reputation or public trust in an organization due to negative 
-                    perceptions or events. It arises from actions, behaviors, or incidents that damage the public image or brand value. 
-                    Reputational risk can be mitigated by maintaining high ethical standards, providing quality products/services, 
-                    effective crisis management, and transparent communication with stakeholders.</p>
-                  <p><b>Example:</b> A scandal involving unethical practices in a financial institution can result in reputational risk, 
-                    leading to customer loss, decreased investor confidence, and legal consequences.</p>
+              <li>Probability of Default (PD)</li>
+              <li>Loss Given Default (LGD)</li>
+              <li>Exposure at Default (EAD)</li>
+              <li>Credit Rating</li>
+              <li>Financial Ratios and Indicators</li>
+              <li>Collateral and Guarantees</li>
+              <li>Industry and Economic Factors</li>
             </ul>
+            <h3>2. Market risk</h3>
+            <p>Market risk models and methodologies are used by financial institutions to assess and manage potential losses 
+              arising from changes in market conditions, such as fluctuations in interest rates, exchange rates, commodity prices, 
+              and equity prices. These models and methodologies help quantify and monitor market risk exposures and assist in making 
+              informed risk management decisions.</p>
+              <p><b>Example:</b> An investment fund holding a portfolio of stocks is exposed to market risk. If the stock prices decline 
+                due to market downturns, the fund's value may decrease.</p>
+              <ul>
+                <p>Here are some commonly used market risk models and methodologies:</p>
+                <li>Value at Risk (VaR)</li>
+                <li>Expected Shortfall (ES)</li>
+                <li>Stress Testing</li>
+                <li>Conditional Value at Risk (CVaR)</li>
+              </ul>
+              <h3>3. Liquidity risk</h3>
+                <p>Liquidity risk refers to the potential difficulty of buying or selling an investment quickly and at a fair price 
+                  without causing significant price changes. It arises from insufficient market liquidity or an inability to convert 
+                  assets into cash when needed. Liquidity risk can be managed by maintaining adequate cash reserves, diversifying 
+                  funding sources, and establishing contingency funding plans.</p>
+                <p><b>Example:</b> A mutual fund holding illiquid assets, such as real estate or private equity, may face liquidity risk 
+                  if investors want to redeem their shares, but the fund struggles to sell the underlying assets quickly.</p>
+              <h3>4. Operational risk</h3>
+                <p>Operational risk is the potential for losses resulting from inadequate or failed internal processes, 
+                  systems, human errors, or external events. It encompasses risks related to technology, fraud, legal 
+                  compliance, and business continuity. Operational risk can be mitigated through proper internal controls, 
+                  staff training, disaster recovery plans, and risk monitoring.</p>
+                <p><b>Example:</b> A cyber-attack on a financial institution's systems that compromises customer data and disrupts 
+                  operations represents operational risk.</p>
+              <h3>5. Regulatory Risk</h3>
+                <p>Regulatory risk arises from changes in laws, regulations, or government policies that impact the financial industry. 
+                  It includes the risk of non-compliance with applicable regulations, which can lead to financial penalties, reputational 
+                  damage, or restrictions on business activities. Regulatory risk can be managed through robust compliance programs, 
+                  staying updated on regulatory changes, and engaging with regulatory authorities.</p>
+                <p><b>Example:</b> A bank faces regulatory risk if new legislation imposes stricter capital requirements, 
+                  necessitating adjustments to its operations and capital structure.</p>
+              <h3>6. Reputational Risk</h3>
+                <p>Reputational risk refers to the potential loss of reputation or public trust in an organization due to negative 
+                  perceptions or events. It arises from actions, behaviors, or incidents that damage the public image or brand value. 
+                  Reputational risk can be mitigated by maintaining high ethical standards, providing quality products/services, 
+                  effective crisis management, and transparent communication with stakeholders.</p>
+                <p><b>Example:</b> A scandal involving unethical practices in a financial institution can result in reputational risk, 
+                  leading to customer loss, decreased investor confidence, and legal consequences.</p>
+          </ul>
             <h2>Financial Risk Analysis key steps</h2>
               <p>The process of risk analysis in the financial banking sector involves several key steps. While the 
                 specific approach may vary among institutions, here are the common steps typically followed in conducting risk analysis:</p>
@@ -501,11 +497,11 @@
 
 
     <!-- Footer -->
-    <footer>
+  <footer>
       &copy; 2023 <a href="https://sites.google.com/view/aruncosmo/home" target="_blank">Arun Kumar Pandey</a>. All rights reserved.
-    </footer>
+  </footer>
 
-    <script>
+  <script>
       // JavaScript function to scroll to a specific section by ID
       function scrollToSection(sectionId) {
           const section = document.querySelector(sectionId);
