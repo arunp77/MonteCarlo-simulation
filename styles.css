@@ -275,3 +275,62 @@ tr:hover {
 td:first-child {
   width: 30px;
 }
+
+/* Container for button and shade */
+.button-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px; /* Add space between buttons */
+}
+
+.left { /* Added left class */
+  margin-right: 10px; /* Space between buttons */
+  margin-left: 0; /* Reset margin */
+}
+
+.right {
+  margin-right: 0; /* Reset margin for the right button */
+  margin-left: auto; /* Move the button to the right */
+}
+
+/* Button styles */
+.custom-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: rgb(28, 221, 242);
+  color: rgb(112, 15, 15);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px; /* Add curved corners */
+}
+
+/* Shade styles */
+.shade {
+  position: absolute;
+  bottom: 5;
+  left: -40%; /* Start from left */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(163, 156, 156, 0.683);
+  transition: left 0.3s ease-in-out;
+  z-index: -1;
+  border-radius: 10px; /* Add curved corners */
+}
+
+/* Hover effect */
+.button-container:hover .shade {
+    left: 0; /* Move to right */
+}
+
+/* Hover effect for the first button */
+.button-container.left:hover .shade {
+    left: 0; /* Move to right */
+}
+
+/* Hover effect for the second button */
+.button-container.right:hover .shade {
+    right: 0; /* Move to left */
+    left: auto; /* Reset the 'left' property */
+}

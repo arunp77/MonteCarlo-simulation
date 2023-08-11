@@ -73,11 +73,22 @@
           <code>The average value after 1000000 rolls is: 3.500648</code>
         </pre>
         <br>
-      <!-- Link to the next section -->
-      <button onclick="scrollToSection('#random-walk-problem')">Go to Random Walk Problem</button>
 
-      <!-- Return button -->
-      <button onclick="window.scrollTo(0, 0)">Return to Top</button>
+        <div class="button-container left"> <!-- Added left class -->
+          <button class="custom-button" onclick="scrollToSection('#random-walk-problem')">
+              Go to Random Walk Problem
+              <span class="shade"></span>
+          </button>
+      </div>
+      
+      <div class="button-container right">
+          <button class="custom-button" onclick="window.scrollTo(0, 0)">
+              Return to Top
+              <span class="shade"></span>
+          </button>
+      </div>
+      
+
     </div>
 
 
