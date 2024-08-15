@@ -403,3 +403,17 @@ td:first-child {
   top: 0;
   border-radius: 10px;
 }
+
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.back-button:hover {
+  background-color: #0056b3;
+}
